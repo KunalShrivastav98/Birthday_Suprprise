@@ -1,0 +1,77 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #fddde6;
+    color: #6a097d;
+}
+
+/* Birthday Message Styling */
+.birthday-message {
+    text-align: center;
+    margin-top: 30px;
+    color: #d23669;
+    animation: fadeIn 2s ease-in;
+}
+
+.birthday-message h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #ff758f;
+}
+
+.birthday-message p {
+    font-size: 1.5rem;
+    color: #b56576;
+    margin-bottom: 20px;
+}
+
+.birthday-image {
+    max-width: 400px;
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.birthday-image:hover {
+    transform: scale(1.05);
+}
+
+/* Age Reveal Styling */
+.age-section {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #4a4e69;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.age-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#age-display {
+    font-size: 1.8rem;
+    color: #6a097d;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
